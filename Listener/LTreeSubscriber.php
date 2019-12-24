@@ -57,7 +57,7 @@ class LTreeSubscriber implements EventSubscriber
         $idValue = reset($identifiers);
 
         if (!$idValue) {
-            throw new LogicException('Can\'t build path property without id');
+            return;
         }
         $pathValue = array();
         if ($parent) {
